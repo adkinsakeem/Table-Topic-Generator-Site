@@ -26,3 +26,45 @@ margin-right:10px;
 .navbar{
 	border-radius: 0px;
 }
+.top-line{
+	border-width: 2px;
+	font-family: Montserrat;
+}
+.middle-line{
+	border: 3px solid #F2DF74;
+	width: 90%;
+}
+.instructions{
+	text-align: center;	
+}
+.categories-container{
+	border: 1px solid #c6c6c6;
+	width:85%;
+	margin: 0 auto;
+	background-color: white;
+}
+body{
+	background-color: #fafafa;
+}
+.category-title{
+	text-align: center;	
+	font-size: 24px;
+	font-family: Montserrat;
+}
+input.custom-checkboxes{
+    width : 24px;
+    height : 24px;
+}
+.custom-control-label{
+	font-size:18px;
+	vertical-align: middle;
+}
+label.custom-control-label{
+	margin-bottom: 15px;
+	padding-right:8vw;
+}
+.checkbox-containers{
+	margin: 0 auto;
+	text-align: center;
+	padding-left: 2vw;
+}
