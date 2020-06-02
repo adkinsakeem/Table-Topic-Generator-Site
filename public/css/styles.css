@@ -48,7 +48,7 @@ body{
 }
 .category-title{
 	text-align: center;	
-	font-size: 24px;
+	font-size: 28px;
 	font-family: Montserrat;
 }
 input.custom-checkboxes{
@@ -67,4 +67,7 @@ label.custom-control-label{
 	margin: 0 auto;
 	text-align: center;
 	padding-left: 2vw;
+}
+tr, td{
+	width: 25vw;
 }

@@ -11,21 +11,32 @@
 <div class="category-title">Categories</div>
 <hr>
 
-<form>
+<form action="/" method="post">
 	<center>
-	<div class="form-check-inline, checkbox-containers">
-    <input type="checkbox" class="custom-control-input, custom-checkboxes" name="defaultUnchecked">
-    <label class="custom-control-label" for="defaultUnchecked">Check</label>
-
-    <input type="checkbox" class="custom-control-input, custom-checkboxes" name="defaultUnchecked">
-    <label class="custom-control-label" for="defaultUnchecked">Check</label>
-
-    <input type="checkbox" class="custom-control-input, custom-checkboxes" name="defaultUnchecked">
-    <label class="custom-control-label" for="defaultUnchecked">Check</label>
-</div>
+		<% var count=0; %>
+	<% for(var x=0; x<(topicCategories.length)/3;x++){ %>
+	<table>
+		<tr>
+			<%for(var y=0;y < 3; y++){ %>
+<td>
+    <input type="checkbox" class="custom-control-input, custom-checkboxes" name="<%= topicCategories[count] %>">
+    <label class="custom-control-label" for="<%= topicCategories[x] %>"><%= topicCategories[count] %></label>
+</td>
+    <% count++; %>
+    <% } %>
+    </tr>
+    <% } %>
+</table>
+<br>
+<label for="tableTopicNumber">How Many Table Topics Would You Like to Generate: </label>
+<INPUT TYPE="NUMBER"name="tableTopicNummberSpinner" MIN="0" MAX="50" STEP="1" VALUE="1" SIZE="6">
+<br>
+<hr width="95%;">
+<button type="submit" class="btn btn-primary btn-lg" style="font-weight: 600; letter-spacing: 1.5px">Submit</button>
 </center>
+<br>
 </form>
 </div>
-
+<br><br><br>
 
 <%- include("partials/footer") -%>
