@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 
 app.get("/", function(req, res){
-res.render("home", {topicCategories: categories});
+	res.render("home", {topicCategories: categories});
 
 }); 
 
@@ -35,52 +35,29 @@ app.post("/", function(req, res){
 		}
 	}
 	tableTopicsAPI += req.body.tableTopicNumberSpinner;
-		for(var y=0;y<checkedBoxes;y++){
-	tableTopicsAPI	+="&category1="+checkedBoxes[y];
-		}
-		https.get(tableTopicsAPI, function(response){
+	for(var y=0;y<checkedBoxes;y++){
+		tableTopicsAPI	+="&category1="+checkedBoxes[y];
+	}
+	https.get(tableTopicsAPI, function(response){
 
-			response.on("data", function(data){
+		response.on("data", function(data){
 			ttJSON = (JSON.parse(data).Topics);
-			//res.send(JSON.stringify(res));
-			//console.log(JSON.parse(data));
-			//console.log(ttJSON[0]);
-			//console.log(ttJSON[1]);
-			//console.log(ttJSON[0].Table_Topic);
-
-			//res.send("/results"+ttJSON);
 			res.redirect("/results");
-
-			});
-
 
 		});
 
 
-
-
-		/*request.open('GET', tableTopicsAPI, true);
-		request.onload = function(){
-			var data = JSON.parse(this.response);
-			if(request.status == 200){
-				data.forEach(TTList, function(){
-					TTArray.push(TTList);
-				});
-			}
-		}
-		request.send();
-		res.redirect("/results", TTArray);*/
+	});
 
 });
 
 app.get("/results", function(req, res){
-	console.log(ttJSON[0].Table_Topic);
-	res.render("results", {TTArrayList: ttJSON, ttCounter: resultsCount});
+	if(ttJSON == undefined){
+		res.render("error");
+	}else{
+		res.render("results", {TTArrayList: ttJSON, ttCounter: resultsCount});
+	}
 });
-
-
-
-
 
 
 

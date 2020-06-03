@@ -1,10 +1,10 @@
 .site-title{
-color: #F2DF74;
-font-weight: 600;
-font-size: 24px;
-font-family: Arial;
-display:inline-block;
-padding-bottom:40px;
+	color: #F2DF74;
+	font-weight: 600;
+	font-size: 24px;
+	font-family: Arial;
+	display:inline-block;
+	padding-bottom:40px;
 }
 .header-logo{
 	width: 15vh;
@@ -12,12 +12,16 @@ padding-bottom:40px;
 	border-radius: 0px !important;
 }
 .site-title>img{
-display:inline-block;
-margin-right:10px;
+	display:inline-block;
+	margin-right:10px;
 }
 .footer-background{
+	position:relative;
 	background-color: #A9B2B1;
 	padding: 10px 0;
+	left: 0;
+   bottom: 0;
+   width: 100%;
 }
 .top-topics-container{
 	text-align: center;	
@@ -52,8 +56,8 @@ body{
 	font-family: Montserrat;
 }
 input.custom-checkboxes{
-    width : 24px;
-    height : 24px;
+	width : 24px;
+	height : 24px;
 }
 .custom-control-label{
 	font-size:18px;
@@ -76,7 +80,7 @@ ol .itemStyle:nth-child(even){
 	font-size: 18px;
 	background-color: #f2f2f2;
 	list-style-position: inside;
-	margin-right:45px;
+	margin-right:40px;
 	padding: 6px 0;
 
 }
@@ -84,6 +88,6 @@ ol .itemStyle:nth-child(odd){
 	font-size: 18px;
 	background-color: #f9f9f9;
 	list-style-position: inside;
-	margin-right:45px;
+	margin-right:40px;
 	padding: 6px 0;
 }

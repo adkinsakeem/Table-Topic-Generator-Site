@@ -1,39 +1,39 @@
 <%- include("partials/header") -%>
 
 <% if(TTArrayList.length <= 0){ %>
-    <h2 class="top-topics-container">Unfortunately, due to the categories chosen, we were unable to generate any table topics</h2>
-    <% }else{ %>
-    <h2 class="top-topics-container">Here are the results of your search</h2>
-    <% } %>
+<h2 class="top-topics-container">Unfortunately, due to the categories chosen, we were unable to generate any table topics</h2>
+<% }else{ %>
+<h2 class="top-topics-container">Here are the results of your search</h2>
+<% } %>
 
-    
-    <hr class="top-line">
 
-    <div class="container, categories-container">
-    	<% if(TTArrayList.length <= 0){ %>
-<h4 class="instructions">Please click the back button to try your search again</h4>
-    <% }else if(TTArrayList.length < ttCounter){ %>
-    <h4 class="instructions">You requested <%= ttCounter %> Table Topics, but due to the categories chosen, we were only able to generate <%= TTArrayList.length %> table topics</h4>
-     <% }else if(ttCounter == 1){ %>
-    <h4 class="instructions">Below is the <%= ttCounter %> table topic you have requested</h4>
-    <% }else{ %>
-    <h4 class="instructions">Below are the <%= ttCounter %> table topics you have requested</h4>
-    <% } %>
-<hr class="middle-line">
-<div class="category-title">Topics</div>
-<hr>
-<ol>
-	<% for(var x=0;x < ttCounter; x++){ %>
-	<div class=itemStyle><li><%= TTArrayList[x].Table_Topic %></li></div>
+<hr class="top-line">
+
+<div class="container, categories-container">
+	<% if(TTArrayList.length <= 0){ %>
+	<h4 class="instructions">Please click the back button to try your search again</h4>
+	<% }else if(TTArrayList.length < ttCounter){ %>
+	<h4 class="instructions">You requested <%= ttCounter %> Table Topics, but due to the categories chosen, we were only able to generate <%= TTArrayList.length %> table topics</h4>
+	<% }else if(ttCounter == 1){ %>
+	<h4 class="instructions">Below is the <%= ttCounter %> table topic you have requested</h4>
+	<% }else{ %>
+	<h4 class="instructions">Below are the <%= ttCounter %> table topics you have requested</h4>
 	<% } %>
-</ol>
-<center>
-<br>
-<form action="/">
-	<button type="submit" class="btn btn-primary btn-lg" style="font-weight: 600; letter-spacing: 1.5px">Back</button>
-</form>
-<br>
-</center>
+	<hr class="middle-line">
+	<div class="category-title">Topics</div>
+	<hr>
+	<ol>
+		<% for(var x=0;x < ttCounter; x++){ %>
+		<div class=itemStyle><li><%= TTArrayList[x].Table_Topic %></li></div>
+		<% } %>
+	</ol>
+	<center>
+		<br>
+		<form action="/">
+			<button type="submit" class="btn btn-primary btn-lg" style="font-weight: 600; letter-spacing: 1.5px">Back</button>
+		</form>
+		<br>
+	</center>
 </div>
 
 <%- include("partials/footer") -%>
