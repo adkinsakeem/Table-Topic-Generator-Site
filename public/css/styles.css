@@ -71,3 +71,19 @@ label.custom-control-label{
 tr, td{
 	width: 25vw;
 }
+
+ol .itemStyle:nth-child(even){
+	font-size: 18px;
+	background-color: #f2f2f2;
+	list-style-position: inside;
+	margin-right:45px;
+	padding: 6px 0;
+
+}
+ol .itemStyle:nth-child(odd){
+	font-size: 18px;
+	background-color: #f9f9f9;
+	list-style-position: inside;
+	margin-right:45px;
+	padding: 6px 0;
+}
