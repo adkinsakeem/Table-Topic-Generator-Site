@@ -35,9 +35,10 @@ app.post("/", function(req, res){
 		}
 	}
 	tableTopicsAPI += req.body.tableTopicNumberSpinner;
-	for(var y=0;y<checkedBoxes;y++){
-		tableTopicsAPI	+="&category1="+checkedBoxes[y];
+	for(var y=0;y<checkedBoxes.length;y++){
+		tableTopicsAPI+="&category1="+checkedBoxes[y];
 	}
+
 	https.get(tableTopicsAPI, function(response){
 
 		response.on("data", function(data){
