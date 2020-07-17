@@ -6,6 +6,7 @@
 	display:inline-block;
 	padding-bottom:40px;
 }
+
 .header-logo{
 	width: 15vh;
 	height: auto;
@@ -72,6 +73,7 @@ label.custom-control-label{
 	text-align: center;
 	padding-left: 2vw;
 }
+
 tr, td{
 	width: 25vw;
 }
@@ -90,4 +92,138 @@ ol .itemStyle:nth-child(odd){
 	list-style-position: inside;
 	margin-right:40px;
 	padding: 6px 0;
+}
+
+.topicGrid{
+	text-align: center;
+}
+
+
+@media only screen and (max-width: 414px) {
+	body{
+		display:table-row;
+	}
+.navbar-title{
+min-height: 100px;
+}
+
+.site-title{
+font-size: 6.5vw;
+padding-top: 6vw;
+text-align: center;
+}
+
+.top-topics-container {
+font-size: 6vw;
+
+}
+
+.instructions{
+font-size: 5vw;(or 4)
+padding: 0px 25px;
+}
+
+.category-title{
+font-size: 7.5vw;
+
+}
+
+.middle-line{
+border: 7px solid #F2DF74;
+width: 95%;
+}
+
+.categories-container{
+width: 100%
+}
+
+input.custom-checkboxes{
+width: 48px;
+height: 48px;
+
+margin-right: 6vw;
+}
+
+tr td{
+display: table-row-group;
+
+}
+
+/*center{
+text-align: left;
+}*/
+
+.topicGrid{
+text-align:left;
+}
+
+table{
+margin-left:50px; or 6vw
+}
+
+label.custom-control-label{
+margin-bottom: 60px;
+
+}
+
+.custom-control-label{
+font-size: 10vw;
+}
+
+label{
+font-size: 6vw;
+text-align: center;
+}
+
+
+input{
+width: 15vw;
+height: 14vw;
+font-size: 7vw;
+text-align: center;
+font-weight: 600;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+font-size: 5vw;
+padding: 20px 32px;
+}
+
+.footer-background{
+	padding: 22px 0;
+	font-size: 5.5vw;
+}
+
+li{
+	padding: 1vw 3vw;
+}
+ol{
+	padding-left: 0px;
+}
+
+ol .itemStyle:nth-child(odd){
+	margin-right: 0px;
+	font-size: 5vw;
+}
+ol .itemStyle:nth-child(even){
+	margin-right: 0px;
+	font-size: 5vw;
+}
+
+hr.topics-line{
+	margin-bottom: 0px;
+}
+
+
+}
+
+@media only screen and (min-width: 415px) and (max-width: 830px) {
+input.custom-checkboxes{
+display: grid;
+margin-left: 7vw;
+}
+
+td{
+padding-bottom: 5vw;
+}
 }
