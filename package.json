@@ -4,7 +4,10 @@
   "description": "This is a site that will generate a random table topic based on various categories selected by the user.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+  "build": "webpack",
+  "heroku-postbuild": "echo Skip build on Heroku"
   },
   "author": "Akeem Adkins",
   "license": "ISC",
